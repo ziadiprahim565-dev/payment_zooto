@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080A0F">
+  <title>بوابة خاصة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="brand-copy">
+        <span class="brand-name">PRIVATE PORTAL</span>
+        <span class="brand-caption">كل حاجه معموله عشانك</span>
+      </div>
+      <div class="top-status"><span class="status-dot"></span>بوابه دفع</div>
+    </header>
+
+    <section id="introView" class="view view-active" aria-labelledby="introTitle">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrowText">رسالة خاصة</span><span class="eyebrow-line"></span></div>
+      <div class="hero-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img"><path d="M32 7 51 15v15c0 13-8 22-19 27C21 52 13 43 13 30V15L32 7Z"/><path d="m23 31 6 6 13-14"/></svg>
+      </div>
+      <h1 id="introTitle">فيه رسالة مستنياك</h1>
+      <p id="introMessage" class="intro-message">أهلًا بيك في مساحتك الخاصة. أدخل الرمز التجريبي للانتقال إلى الرسالة التالية.</p>
+
+      <form id="codeForm" class="access-card" novalidate>
+        <label for="accessCode">آخر 6 أرقام من الرمز</label>
+        <div class="input-wrap">
+          <span class="input-symbol" aria-hidden="true">✦</span>
+          <input id="accessCode" name="accessCode" type="text" inputmode="numeric" autocomplete="off"
+                 maxlength="6" pattern="[0-9]{6}" placeholder="٠٠٠٠٠٠" aria-describedby="feedback">
+          <span class="input-count" id="inputCount">0 / 6</span>
+        </div>
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+        <button class="primary-button" type="submit">
+          <span id="buttonText">ابحث عن العملية</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="card-footnote"><span class="tiny-lock" aria-hidden="true">◇</span> خاص بزوتو —  يتم التحقق من معاملة مالية </p>
+      </form>
+      <div class="bottom-note"><span></span> zooto <span></span></div>
+    </section>
+
+    <section id="messageView" class="view message-view" aria-labelledby="messageTitle" hidden>
+      <div class="success-orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-core">✓</div></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span><span id="successEyebrow">تم قبول الرمز</span><span class="eyebrow-line"></span></div>
+      <h1 id="messageTitle">رسالتك الخاصة</h1>
+      <article class="letter-card">
+        <div class="letter-top"><span>✦</span><span id="letterLabel">رسالة لك</span><span>✦</span></div>
+        <div id="privateMessage" class="private-message">هذه رسالة تجريبية. استبدل هذا النص برسالتك الخاصة من ملف content.js.</div>
+        <div class="letter-signature" id="signatureText">مع أطيب الأمنيات</div>
+      </article>
+      <button id="backButton" class="secondary-button" type="button">العودة للصفحة الأولى <span aria-hidden="true">↶</span></button>
+    </section>
+
+    <footer class="site-footer"><span>PRIVATE PORTAL</span><span class="footer-separator">•</span><span id="footerText">مساحة خاصة، بتصميم بسيط وأنيق</span></footer>
+  </main>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
